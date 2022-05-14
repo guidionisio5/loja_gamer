@@ -55,10 +55,6 @@ body {
     text-decoration: none;
 }
 
-.fa-solid {
-    margin-left: 15px;
-}
-
 .nav-bar {
     width: 100%;
     background-color: #fff;
@@ -135,10 +131,13 @@ body {
     max-width: var(--carousel-slide-with, 40%);
 }
 
-.carousel__button.is-prev, .carousel__button.is-next {
+.carousel__button {
     color: #fff;
     background-color: #000;
+    opacity: 85%;
     border-radius: 30%;
+    /* Deixa a espressura da seta mais grossa */
+    --carousel-button-svg-stroke-width: 3;
 }
 
 .banner2 {
@@ -175,6 +174,15 @@ body {
     text-decoration: none;
 }
 
+.carousel__dots {
+    color: #FFF;
+    /* margin-top: -70px !important; */
+}
+/* Final da versão desktop */
+
+
+
+/* Inicio da versão mobile */
 @media only screen and (max-width: 1024px) {
     #container {
         width: 100%;
@@ -198,7 +206,7 @@ body {
         padding: 10px;
     }
 
-    .texto-responsivo {
+    .carrinho-texto {
         display: none;
     }
 
@@ -229,5 +237,9 @@ body {
 
     .rodape {
         grid-template-columns: 1fr;
+    }
+
+    .oculta-navbar{
+        display: none;
     }
 }
